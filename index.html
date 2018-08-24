@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flygreen</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="assets/cs/main.css">
+</head>
+<body>
+	<!-- cabecera -->
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">		        
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Acerca de Flygreen</a></li>
+		            <li><a href="#home">home</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		       <a class="asdasd" href="#"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>Flygreen</a>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+
+	<!-- sección 1-->
+	<section id="home">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-8 col-md-8">
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<h1>Welcome!</h1>
+							<h3>Insert to Enterprise ID...</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="input-group input1">
+							  <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon2" aria-hidden="true"></span>
+							  <input type="text" class="form-control EnterpriseId1" placeholder="Enterprise ID" aria-describedby="sizing-addon2">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-8 col-md-8">
+							<button type="button" class="btn btn-default center-block" id="btnConfirmarInicio">Continue</button>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</section>
+
+	<!-- sección 2-->
+	<section id="formulario">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8">
+					<form>
+						<h1>Flight information</h1>
+						<div class="row paddingBot">
+							<div class="col-lg-12 col-md-12">
+								<label>Enterprise ID:</label>
+								<div class="input-group">
+								  <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+								  <input type="text" class="form-control EnterpriseId2" id="form1" aria-describedby="basic-addon1" readonly="true">
+								</div>
+							</div>
+						</div>
+						<div class="row paddingBot">
+							<div class="col-lg-6 col-md-8">
+								<label>Origin:</label>
+								<div class="input-group">
+								  <span class="input-group-addon glyphicon glyphicon-globe" id="basic-addon1"></span>
+								  <input type="text" class="form-control viaje" id="form2" placeholder="Origin" aria-describedby="basic-addon1">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<label>Destiny:</label>
+								<div class="input-group">
+								  <span class="input-group-addon glyphicon glyphicon-globe" id="basic-addon1"></span>
+								  <input type="text" class="form-control viaje" id="form3" placeholder="Destiny" aria-describedby="basic-addon1">
+								</div>
+							</div>
+						</div>
+						<div class="row paddingBot">
+							<div class="col-lg-6 col-md-6">
+								<label>Date:</label>
+								  <div class="input-group">
+								  	<span class="input-group-addon glyphicon glyphicon-calendar" id="basic-addon1"></span>
+								 	<input type="date" class="form-control" id="fecha" id="form4" aria-describedby="basic-addon1">
+								</div>
+							</div>
+						</div>
+						<div class="row paddingBot">
+							<div class="col-lg-12 col-md-12">
+								<button class="btn btn-default" id="ConfirmationFormulario">Confirmation</button> 
+								<button class="btn btn-default" id="CancelarFormulario">Cancel</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- seccion 3 informacion de vuelos retornados-->
+	<section id="retornoVuelos">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8">
+						<h1>Available flights</h1>
+				</div>
+				</div>
+				<div class="row">
+					<table class="tg">
+
+  <tr>
+
+    <th class="tg-baqh" colspan="11"> Greenfly Search Results</th>
+
+  </tr>
+
+  <tr>
+
+    <td class="tg-hmp3">From</td>
+
+    <td class="tg-hmp3">To</td>
+
+    <td class="tg-hmp3">Departure Time</td>
+
+    <td class="tg-hmp3">Arrival Time</td>
+
+                              <td class="tg-hmp3">Flight ID</td>
+
+                              <td class="tg-hmp3">Gate</td>
+
+                              <td class="tg-hmp3">Price</td>
+
+                              <td class="tg-hmp3">Accenture Greenflyers</td>
+
+                              <td class="tg-hmp3">CO2 saved on this flight</td>
+
+                              <td class="tg-hmp3">Choose a Flight</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="tg-0lax">Santiago</td>
+
+    <td class="tg-lqy6">Buenos Aires</td>
+
+    <td class="tg-lqy6">09:15</td>
+
+    <td class="tg-lqy6">12:50</td>
+
+    <td class="tg-lqy6">854</td>
+
+                              <td class="tg-lqy6">8</td>
+
+                              <td class="tg-lqy6">$458</td>
+
+                              <td class="tg-lqy6">54</td>
+
+                              <td class="tg-lqy6">50%</td>
+
+                              <td class="tg-lqy6"> <input type="checkbox" id="chk1"></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="tg-0lax">Santiago</td>
+
+    <td class="tg-lqy6">Buenos Aires</td>
+
+    <td class="tg-lqy6">10:40</td>
+
+    <td class="tg-lqy6">12:50</td>
+
+    <td class="tg-lqy6">874</td>
+
+                              <td class="tg-lqy6">9</td>
+
+                              <td class="tg-lqy6">$540</td>
+
+                              <td class="tg-lqy6">35</td>
+
+                              <td class="tg-lqy6">25%</td>
+
+                              <td class="tg-lqy6"> <input type="checkbox" id="chk2"></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="tg-0lax">Santiago</td>
+
+    <td class="tg-lqy6">Buenos Aires</td>
+
+    <td class="tg-lqy6">13:30</td>
+
+    <td class="tg-lqy6">15:52</td>
+
+    <td class="tg-lqy6">652</td>
+
+                              <td class="tg-lqy6">11</td>
+
+                              <td class="tg-lqy6">$654</td>
+
+                              <td class="tg-lqy6">54</td>
+
+                              <td class="tg-lqy6">64%</td>
+
+                              <td class="tg-lqy6"> <input type="checkbox" id="chk3"></td>
+
+  </tr>
+
+               <tr>
+
+    <td class="tg-0lax">Santiago</td>
+
+    <td class="tg-lqy6">Buenos Aires</td>
+
+    <td class="tg-lqy6">16:30</td>
+
+    <td class="tg-lqy6">18:52</td>
+
+    <td class="tg-lqy6">674</td>
+
+                              <td class="tg-lqy6">08</td>
+
+                              <td class="tg-lqy6">$540</td>
+
+                              <td class="tg-lqy6">64</td>
+
+                              <td class="tg-lqy6">70%</td>
+
+                              <td class="tg-lqy6"> <input type="checkbox" id="chk4"></td>
+
+  </tr>
+
+               <tr>
+
+    <td class="tg-0lax">Santiago</td>
+
+    <td class="tg-lqy6">Buenos Aires</td>
+
+    <td class="tg-lqy6">20:10</td>
+
+    <td class="tg-lqy6">22:54</td>
+
+    <td class="tg-lqy6">751</td>
+
+                              <td class="tg-lqy6">9</td>
+
+                              <td class="tg-lqy6">$540</td>
+
+                              <td class="tg-lqy6">13</td>
+
+                              <td class="tg-lqy6">15%</td>
+
+                              <td class="tg-lqy6"> <input type="checkbox" id="chk5"></td>
+
+  </tr>
+
+               <tr>
+
+    <td class="tg-0lax">Santiago</td>
+
+    <td class="tg-lqy6">Buenos Aires</td>
+
+    <td class="tg-lqy6">22:30</td>
+
+    <td class="tg-lqy6">00:52</td>
+
+    <td class="tg-lqy6">252</td>
+
+                              <td class="tg-lqy6">06</td>
+
+                              <td class="tg-lqy6">$782</td>
+
+                              <td class="tg-lqy6">32</td>
+
+                              <td class="tg-lqy6">45%</td>
+
+                              <td class="tg-lqy6"> <input type="checkbox" id="chk6"></td>
+
+  </tr>
+
+</table>
+				</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<button class="btn btn-default" id="confirmacionVuelo">Continue</button>
+					<button class="btn btn-default" id="CancelarVuelo">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--seccion 4 -->
+	<section id="confirmacion">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8">
+					<h1>Your flight would be</h1>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+								<label>Name:</label>
+								<div class="input-group">
+								  <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+								  <input type="text" class="form-control control1" aria-describedby="basic-addon1" readonly="true">
+								</div>
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+								<label>Flight:</label>
+								<div class="input-group">
+								  <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+								  <input type="text" class="form-control control2" placeholder="Username" aria-describedby="basic-addon1"  readonly="true">
+								</div>
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+								<label>Date:</label>
+								<div class="input-group">
+								  <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+								  <input type="text" class="form-control control3" placeholder="Username" aria-describedby="basic-addon1"  readonly="true">
+								</div>
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+								<label>Hour:</label>
+								<div class="input-group">
+								  <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+								  <input type="text" class="form-control control4" placeholder="Username" aria-describedby="basic-addon1"  readonly="true">
+								</div>
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+								<label></label>
+								<div class="input-group">
+								  <span class="input-group-addon">
+							        <input type="checkbox" id="chk" >
+							      </span>
+							      <p>Information is correct?</p>
+								</div>
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<button class="btn-default btn" id="confirmarFinal">Confirmation</button> 
+							<button class="btn-default btn" id="canccelarFinal">Cancel</button> "
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="return">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+       <img src="assets/img/checkmark-gif.gif" class="center-block">
+			<button class="btn-default btn center-block" id="btnHome" data-toggle="modal" data-target="informacionOK">Finish</button>
+			</div>	
+		</div>	
+	</section>
+
+			        <div id="informacionOK" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Confirmation</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Your flight has been booked successfully!</p><br>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-contact" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+	<footer>
+		<div class="container-fluid">
+			<p>Developed by CookieBreaker</p>
+		</div>		
+	</footer>
+
+	<!-- script -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  	<!-- control de vista -->
+  	<script type="text/javascript">
+
+	$(document).ready(function(){ 
+
+			$('#formulario').hide();
+			$('#retornoVuelos').hide();
+			$('#confirmacion').hide();
+			$('#return').hide();
+			
+			//control de botones inicio
+			$('#btnConfirmarInicio').on('click', function(){
+				if($(".EnterpriseId1").val() == ""){
+					alert("Complete information");
+				}
+				else{
+					$('#formulario').show();
+					$('#home').hide();
+					$(".EnterpriseId2").val($(".EnterpriseId1").val().toUpperCase());
+				}				
+			});
+
+			//control de botones formulario
+			$('#ConfirmationFormulario').mouseenter( function(){
+        if($("#form1").val() == "" || $("#form2").val() == "" || $("#form3").val() == "" || $("#form4").val() == ""){
+         alert("Complete the form please");
+        }
+        else
+        {
+           $('#retornoVuelos').show();
+           $('#formulario').hide();
+        }
+				
+			});
+
+    $("#chk1").click(function()
+    {
+     $(".control1").val($(".EnterpriseId2").val());
+     $(".control2").val("854");
+     $(".control3").val($("#fecha").val());
+     $(".control4").val("9:15");
+    });
+
+    $("#chk2").click(function(){
+     $(".control1").val($(".EnterpriseId2").val());
+     $(".control2").val("874");
+     $(".control3").val($("#fecha").val());
+     $(".control4").val("10:40");
+    });
+
+    $("#chk3").click(function(){
+     $(".control1").val($(".EnterpriseId2").val());
+     $(".control2").val("652");
+     $(".control3").val($("#fecha").val());
+     $(".control4").val("13:30");
+     });
+
+    $("#chk4").click(function(){
+       $(".control1").val($(".EnterpriseId2").val());
+       $(".control2").val("674");
+       $(".control3").val($("#fecha").val());
+       $(".control4").val("16:30");
+     });
+
+    $("#chk5").click(function(){
+       $(".control1").val($(".EnterpriseId2").val());
+       $(".control2").val("751");
+       $(".control3").val($("#fecha").val());
+       $(".control4").val("20:21");
+     });
+
+    $("#chk6").click(function(){
+       $(".control1").val($(".EnterpriseId2").val());
+       $(".control2").val("252");
+       $(".control3").val($("#fecha").val());
+       $(".control4").val("22:30");
+     });
+
+			$('#CancelarFormulario').on('click', function(){
+				$(".EnterpriseId1").val("");
+				$('#home').show();
+				$('#formulario').hide();
+
+			});
+
+
+			//control botones vuelos
+			$('#confirmacionVuelo').on('click', function(){
+				$('#confirmacion').show();
+				$('#retornoVuelos').hide();
+			});
+			$('#CancelarVuelo').on('click', function(){
+				$('#formulario').show();
+				$('#retornoVuelos').hide();
+			});
+
+			//control botones confirmar
+			$('#confirmarFinal').on('click', function(){
+          $('#return').show();
+          $('#confirmacion').hide();
+			});
+			
+			$('#canccelarFinal').on('click', function(){
+				$('#retornoVuelos').show();
+				$('#confirmacion').hide();
+			});
+
+			$('#btnHome').on('click', function(){
+				$('#home').show();
+        		$('#return').hide();
+        		location.reload();
+			});
+			
+		});
+	</script>
+  <script type="text/javascript">
+      window._chatlio = window._chatlio||[];
+      !function(){ var t=document.getElementById("chatlio-widget-embed");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page", "open", "showOrHide"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3");
+         n.setAttribute('data-widget-id','ea11b7df-45c6-4b6a-5d52-5c8e37c6a6d5');
+         c.parentNode.insertBefore(n,c);
+      }();
+  </script>
+
+
+</body>
+</html>
